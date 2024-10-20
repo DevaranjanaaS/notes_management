@@ -1,0 +1,219 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 20px;
+}
+
+.notes-section {
+    width: 80%;
+}
+
+.no-docs-msg {
+    text-align: center;
+    font-size: 18px;
+    margin: 20px 0;
+}
+
+.offline-notes .note {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    border: 1px solid #ccc;
+    margin-bottom: 10px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.offline-notes .note:hover {
+    background-color: #f0f0f0;
+}
+
+.note-title {
+    font-size: 16px;
+}
+
+.note-actions button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 18px;
+}
+
+.note-actions .edit-btn {
+    margin-right: 10px;
+}
+.action-buttons {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    display: flex;
+    flex-direction: row;
+    gap: 10px; /* Space between buttons */
+}
+
+.add-note-btn,
+.sync-notes-btn {
+    background-color: transparent; /* Make background transparent */
+    border: none;
+    cursor: pointer;
+    font-size: 36px; /* Increase icon size */
+    transition: color 0.2s; /* Smooth transition for color */
+}
+
+.add-note-btn:hover,
+.sync-notes-btn:hover {
+    color: #0056b3; /* Change color on hover */
+}
+
+/* You might want to add specific icon styles */
+.add-note-btn i, /* Assuming you are using font-awesome or similar for icons */
+.sync-notes-btn i {
+    margin: 0; /* Reset margin if needed */
+    color: #007bff; /* Default icon color */
+}
+
+.logout-btn {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background-color: #dc3545;
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    transition: background-color 0.2s; /* Smooth transition */
+}
+
+.logout-btn:hover {
+    background-color: #c82333;
+}
+
+/* Modal styling */
+.modal {
+    width: 400px;
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+/* Add Note Modal Enhancements */
+.add-note-modal {
+    background-color: #f7f7f7;
+}
+
+.note-input,
+.note-textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+.save-btn {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.2s; /* Smooth transition */
+}
+
+.save-btn:hover {
+    background-color: #0056b3;
+}
+
+/* View Note Modal Enhancements */
+.view-note-modal {
+    background-color: #f7f7f7;
+}
+
+.view-note-title {
+    text-align: center;
+    font-size: 20px;
+    margin-bottom: 15px;
+}
+
+.view-note-content {
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+
+.close-view-btn {
+    background-color: #dc3545;
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.2s; /* Smooth transition */
+}
+
+.close-view-btn:hover {
+    background-color: #c82333;
+}
+
+.download-all-btn {
+    background-color: #007bff; /* Bootstrap primary color */
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 20px;
+    transition: background-color 0.2s; /* Smooth transition */
+}
+
+.download-all-btn:hover {
+    background-color: #0056b3; /* Darker shade for hover effect */
+}
+
+/* Global styles for light mode */
+body {
+    background-color: #ffffff;
+    color: #000000;
+}
+
+/* Global styles for dark mode */
+body.dark {
+    background-color: #121212; /* Dark background */
+    color: #ffffff; /* Light text color */
+}
+
+/* Styles for toggle button */
+.theme-toggle {
+    position: fixed; /* Adjust position as needed */
+    top: 20px;
+    right: 20px;
+}
+
+.toggle-btn {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    font-size: 24px;
+    color: inherit; /* Use inherited color */
+}
+
+.toggle-btn:hover {
+    opacity: 0.8; /* Slightly fade on hover */
+}
